@@ -70,6 +70,7 @@ svg {
     width: 25px;
     height: 25px;
     fill: #575757;
+    cursor: pointer;
 }
 
 /*! Début style Modal */
@@ -84,7 +85,7 @@ svg {
     width: 100%;
 }
 
-.modal-container {
+.modal-container, .modal-container2 {
     /* display: none; */
     visibility: hidden;
     position: fixed;
@@ -106,7 +107,7 @@ select {
     border: solid 1px #575757;
 }
 
-.modal-container.active {
+.modal-container.active, .modal-container2.active {
     /* display: block; */
     transform: visibility 0s;
     visibility: visible;
@@ -121,18 +122,19 @@ select {
     transition: opacity 0.4s 0.2s ease-out;
 }
 
-.modal-container.active .overlay {
+.modal-container.active .overlay, .modal-container2.active .overlay {
     opacity: 1;
     transition: opacity 0.4s ease-out;
 }
 
 .modal {
-    opacity: 0;
+    opacity: 1;
     width: 95%;
     max-width: 500px;
     min-width: 300px;
     padding: 30px;
     background-color: #FFFFFF;
+    border: 1px solid #484848;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -141,7 +143,7 @@ select {
         transform 0.4s ease-out;
 }
 
-.modal-container.active .modal {
+.modal-container.active .modal, .modal-container2.active .modal {
     opacity: 1;
     transform: translate(-50%, -50%);
     transition: opacity 0.4s 0.2s ease-out,
@@ -158,4 +160,19 @@ select {
     background: #000000;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.modal-msg p {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: rgb(48, 48, 48);
+}
+
+.modal-btn-ctn {
+    display: flex;
+    justify-content: space-between;
 }
