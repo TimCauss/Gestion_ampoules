@@ -56,4 +56,6 @@ function edit(id, date, floor, position, price) {
     `edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
     "_blank"
   );
+  handle.blur();
+  window.focus();
 }
