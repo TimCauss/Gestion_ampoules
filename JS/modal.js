@@ -52,9 +52,6 @@ function goto(str) {
 }
 
 function edit(id, date, floor, position, price) {
-  console.log(
-    `edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`
-  );
   window.open(
     `edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
     "_blank"
