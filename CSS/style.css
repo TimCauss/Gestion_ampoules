@@ -25,16 +25,18 @@ header {
     align-items: center;
 }
 
-button {
+button,
+.btn-add {
     font-family: 'Bebas Neue';
     padding: 10px 20px;
     border: none;
-    background-color: rgb(38, 37, 39);
+    background-color: #595959;
     color: white;
     transition: background-color 0.5s ease-in-out scale 0.8s ease-in-out;
 }
 
-button:hover {
+button:hover,
+.btn-add:hover {
     cursor: pointer;
     background-color: rgb(106, 13, 194);
     color: white;
@@ -66,8 +68,7 @@ td {
     max-width: 30px;
 }
 
-
-tr:hover .td-hover{
+tr:hover .td-hover {
     background-color: rgba(116, 116, 116, 0.322);
 }
 
@@ -105,11 +106,12 @@ svg {
     border-radius: 5px;
     padding: 3px;
     fill: white;
-    background-color: rgb(255, 0, 0);
+    background-color: #575757;
     transition: scale 0.1s ease-in-out;
 }
 
 .modal-trigger2:hover {
+    background-color: red;
     scale: 1.05;
 }
 
@@ -117,11 +119,12 @@ svg {
     border-radius: 5px;
     padding: 3px;
     fill: white;
-    background-color: rgb(7, 192, 23);
+    background-color: #575757;
     transition: scale 0.1s ease-in-out;
 }
 
 .modal-trigger3:hover {
+    background-color: rgb(7, 207, 7);
     scale: 1.05;
 }
 

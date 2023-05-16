@@ -126,7 +126,7 @@ require_once("close.php")
                     </div>
                     <div class="input-container">
                         <select name="position" required>
-                            <option value="">--Position (North, South...)</option>
+                            <option value="">--Position (North, South...)--</option>
                             <option value="North">North</option>
                             <option value="South">South</option>
                             <option value="East">East</option>
@@ -138,7 +138,7 @@ require_once("close.php")
                         <input type="text" name="price" placeholder="Price">
                     </div>
                     <div class="btn-ajouter-ctn">
-                        <input type="submit" value="Add">
+                        <input class="btn-add" type="submit" value="Add">
                     </div>
             </form>
         </div>
