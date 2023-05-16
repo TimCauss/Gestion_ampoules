@@ -59,19 +59,35 @@ th {
 
 td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 1px 5px;
 }
 
-tr:hover {
+.td-small {
+    max-width: 30px;
+}
+
+
+tr:hover .td-hover{
     background-color: rgba(116, 116, 116, 0.322);
 }
 
 svg {
-    width: 25px;
-    height: 25px;
-    fill: #575757;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
+
+.td-icon {
+    border: none;
+}
+
+.edit_input {
+    border: none;
+}
+
+
 
 /*! Début style Modal */
 
@@ -85,7 +101,32 @@ svg {
     width: 100%;
 }
 
-.modal-container, .modal-container2 {
+.modal-trigger2 {
+    border-radius: 5px;
+    padding: 3px;
+    fill: white;
+    background-color: rgb(255, 0, 0);
+    transition: scale 0.1s ease-in-out;
+}
+
+.modal-trigger2:hover {
+    scale: 1.05;
+}
+
+.modal-trigger3 {
+    border-radius: 5px;
+    padding: 3px;
+    fill: white;
+    background-color: rgb(7, 192, 23);
+    transition: scale 0.1s ease-in-out;
+}
+
+.modal-trigger3:hover {
+    scale: 1.05;
+}
+
+.modal-container,
+.modal-container2 {
     /* display: none; */
     visibility: hidden;
     position: fixed;
@@ -94,7 +135,12 @@ svg {
     height: 100vh;
     z-index: 5;
     transition: visibility 0.4s;
+
 }
+
+/* .modal-container2 {
+    transform: translateX(-60%);
+} */
 
 .input-container {
     width: 100%;
@@ -107,7 +153,8 @@ select {
     border: solid 1px #575757;
 }
 
-.modal-container.active, .modal-container2.active {
+.modal-container.active,
+.modal-container2.active {
     /* display: block; */
     transform: visibility 0s;
     visibility: visible;
@@ -122,7 +169,8 @@ select {
     transition: opacity 0.4s 0.2s ease-out;
 }
 
-.modal-container.active .overlay, .modal-container2.active .overlay {
+.modal-container.active .overlay,
+.modal-container2.active .overlay {
     opacity: 1;
     transition: opacity 0.4s ease-out;
 }
@@ -143,11 +191,12 @@ select {
         transform 0.4s ease-out;
 }
 
-.modal-container.active .modal, .modal-container2.active .modal {
+.modal-container.active .modal,
+.modal-container2.active .modal {
     opacity: 1;
     transform: translate(-50%, -50%);
     transition: opacity 0.4s 0.2s ease-out,
-    transform 0.4s 0.2s ease-out;
+        transform 0.4s 0.2s ease-out;
 }
 
 .close-modal {
@@ -163,13 +212,13 @@ select {
 }
 
 .modal-msg p {
-        font-family: 'Bebas Neue';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-        color: rgb(48, 48, 48);
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: rgb(48, 48, 48);
 }
 
 .modal-btn-ctn {
