@@ -63,7 +63,7 @@ require_once("close.php")
             <thead>
                 <th>ID</th>
                 <th>Date</th>
-                <th>Stage</th>
+                <th>Floor</th>
                 <th>Position</th>
                 <th>Price</th>
             </thead>
@@ -76,12 +76,14 @@ require_once("close.php")
                         <tr>
                             <td class="td-hover td-small"><?= $row["id"] ?></td>
                             <td class="td-hover">
-                                <input class="edit_input" type="date" name="edit_date" value='<?= $row["create_date"] ?>'>
+                                <input class="edit_input date_<?= $row['id'] ?>" type="date" name="edit_date" value='<?= $row["create_date"] ?>'>
                             </td>
-                            <td class="td-hover td-small"><input class="edit_input" name="edit_stage" type="number" min="0" max="8" value="<?= $row['stage'] ?>"> </td>
+                            <td class="td-hover td-small">
+                                <input class="edit_input stage_<?= $row['id'] ?>" name="edit_stage" type="number" min="0" max="8" value="<?= $row['stage'] ?>">
+                            </td>
                             <td class="td-hover td-position">
-                                <select class="edit_input" name="edit_position">
-                                    <option value=""><?= $row["position"] ?></option>
+                                <select class="edit_input position_<?= $row['id'] ?>" name="edit_position">
+                                    <option value="<?= $row["position"] ?>"><?= $row["position"] ?></option>
                                     <option value="North">North</option>
                                     <option value="South">South</option>
                                     <option value="East">East</option>
@@ -89,14 +91,14 @@ require_once("close.php")
                                 </select>
                             </td>
                             <td class="td-hover td-small">
-                                <input class="edit_input" type="text" name="edit_price" value='<?= $row["price"] . " $" ?>'>
+                                <input class="edit_input price_<?= $row['id'] ?>" type="text" name="edit_price" value='<?= $row["price"] . " $" ?>'>
                             </td>
                             <td class="td-icon">
-                                <svg class="modal-trigger2" data-id="<?= $row["id"] ?>" width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="modal-trigger2 trash" data-id="<?= $row["id"] ?>" width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.78571 0.785713C4 0.785713 3.35714 1.42857 3.35714 2.21428H1.92857C1.14286 2.21428 0.5 2.85714 0.5 3.64286H10.5C10.5 2.85714 9.85714 2.21428 9.07143 2.21428H7.64286C7.64286 1.42857 7 0.785713 6.21429 0.785713H4.78571ZM1.92857 5.07143V11.9429C1.92857 12.1 2.04286 12.2143 2.2 12.2143H8.81429C8.97143 12.2143 9.08571 12.1 9.08571 11.9429V5.07143H7.65714V10.0714C7.65714 10.4714 7.34286 10.7857 6.94286 10.7857C6.54286 10.7857 6.22857 10.4714 6.22857 10.0714V5.07143H4.8V10.0714C4.8 10.4714 4.48571 10.7857 4.08571 10.7857C3.68571 10.7857 3.37143 10.4714 3.37143 10.0714V5.07143H1.94286H1.92857Z" />
                                 </svg>
 
-                                <svg width="20" height="20" class="modal-trigger3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="20" height="20" data-id="<?= $row["id"] ?>" class="modal-trigger3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M20.048 6.352a1.2 1.2 0 0 1 0 1.696l-9.6 9.6a1.2 1.2 0 0 1-1.696 0l-4.8-4.8a1.2 1.2 0 0 1 1.696-1.696L9.6 15.103l8.752-8.751a1.2 1.2 0 0 1 1.696 0Z" clip-rule="evenodd"></path>
                                 </svg>
                             </td>

@@ -102,7 +102,7 @@ svg {
     width: 100%;
 }
 
-.modal-trigger2 {
+.trash {
     border-radius: 5px;
     padding: 3px;
     fill: white;
@@ -110,7 +110,7 @@ svg {
     transition: scale 0.1s ease-in-out;
 }
 
-.modal-trigger2:hover {
+.trash:hover {
     background-color: red;
     scale: 1.05;
 }
