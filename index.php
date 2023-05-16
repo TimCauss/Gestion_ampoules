@@ -52,10 +52,9 @@ require_once("close.php")
 </head>
 
 <body>
-    <header>
-        <h1>GESTION DES AMPOULES</h1>
-        <nav><button class="modal-trigger" href="add.php">Add</button></nav>
-    </header>
+
+    <?php include_once "header.php"; ?>
+
 
     <main>
         <table>
