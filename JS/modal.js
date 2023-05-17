@@ -8,10 +8,6 @@ const deleteBtn = document.querySelector(".delete");
 const triggerEdit = document.querySelectorAll(".modal-trigger3");
 
 let id = null;
-/* let date = null;
-let floor = null;
-let position = null;
-let price = null; */
 
 modalTrigger.forEach((trigger) =>
   trigger.addEventListener("click", toggleModal)
@@ -25,7 +21,7 @@ modalTrigger2.forEach((trigger) =>
 );
 
 deleteBtn.addEventListener("click", () => {
-  goto("del");
+  window.location.replace("del.php?id=" + id);
 });
 
 triggerEdit.forEach((trigger) =>
@@ -47,13 +43,9 @@ function toggleModal2() {
   modalContainer2.classList.toggle("active");
 }
 
-function goto(str) {
-  if (str === "del") window.location.replace("del.php?id=" + id);
-}
-
 function edit(id, date, floor, position, price) {
   window.open(
-    `edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
+    `../edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
     "_blank"
   );
   handle.blur();

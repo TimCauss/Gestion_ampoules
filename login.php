@@ -9,15 +9,15 @@
     <title>Login : Bulb Manager </title>
 </head>
 
-<body>
+<body class="body-login">
     <main>
         <div class="form-container">
+            <div class="form-header">
+                <a href="">
+                    <h1>need help ?</h1>
+                </a>
+            </div>
             <form action="">
-                <div class="form-header">
-                    <a href="">
-                        <h1>need help ?</h1>
-                    </a>
-                </div>
                 <div class="form-main">
                     <div>
                         <input type="text" name="user_name" id="user_name" placeholder="Username">
@@ -25,17 +25,18 @@
                     <div>
                         <input type="password" name="password" id="password" placeholder="Password">
                     </div>
-                    <div>
-                        <input type="submit">
-                    </div>
-                    <div>
-                        <a href="#">Forgot Password ?</a>
+                    <div class="action-ctn">
+                        <div class="subm-ctn">
+                            <input type="submit" value="Login">
+                        </div>
+                        <div class="subm-ctn forgt">
+                            <a href="#">Forgot Password ?</a>
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
     </main>
-
 </body>
 
 </html>
