@@ -25,7 +25,7 @@ deleteBtn.addEventListener("click", () => {
 });
 
 triggerEdit.forEach((trigger) =>
-  trigger.addEventListener("click", (e) => {
+  trigger.addEventListener("click", () => {
     let id = trigger.getAttribute("data-id");
     let date = document.querySelector(".date_" + id).value;
     let floor = document.querySelector(".stage_" + id).value;
@@ -45,7 +45,7 @@ function toggleModal2() {
 
 function edit(id, date, floor, position, price) {
   window.open(
-    `../edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
+    `edit.php?id=${id}&create_date=${date}&stage=${floor}&position=${position}&price=${price}`,
     "_blank"
   );
   handle.blur();

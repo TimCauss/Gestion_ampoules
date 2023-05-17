@@ -89,7 +89,6 @@ svg {
 }
 
 
-
 /*! Début style Modal */
 
 .add-ampoule-ctn {
@@ -272,7 +271,7 @@ select {
     gap: 30px;
 }
 
-form input {
+.form-container form input {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -289,7 +288,7 @@ form input {
     justify-content: center;
 }
 
-form input[type="submit"] {
+.subm-ctn input[type="submit"] {
     background-color: #575757;
     width: 95px;
     height: 28px;
@@ -304,7 +303,7 @@ form input[type="submit"] {
     transition: background-color 0.2s ease-in-out;
 }
 
-form input[type="submit"]:hover {
+.subm-ctn input[type="submit"]:hover {
     background-color: #A378FF;
 }
 
