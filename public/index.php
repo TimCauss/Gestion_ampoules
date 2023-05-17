@@ -3,7 +3,7 @@
 
 
 
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = "SELECT * FROM ampoules";
 $query = $db->prepare($sql);
@@ -37,7 +37,7 @@ if (
     $query_add->execute();
     header("Location: index.php");
 }
-require_once("close.php")
+require_once("../close.php")
 ?>
 
 <!DOCTYPE html>
@@ -47,13 +47,13 @@ require_once("close.php")
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Gestionnaire d'amoules</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Bulb Manager</title>
 </head>
 
 <body>
 
-    <?php include_once "header.php"; ?>
+    <?php include_once "../header.php"; ?>
 
 
     <main>
@@ -152,10 +152,10 @@ require_once("close.php")
         </div>
         <div class="modal">
             <div class="modal-msg">
-                <p>Etes vous sûr de vouloir supprimer cette entrée ?</p>
+                <p>Are you sure you want to delete the intervention?</p>
             </div>
             <div class="modal-btn-ctn">
-                <div class="btn-suppr"><button class="delete">Supprimer</button>
+                <div class="btn-suppr"><button class="delete">Delete</button>
                 </div>
                 <div class="btn-cancel modal-trigger2"><button>Cancel</button></div>
             </div>
@@ -163,7 +163,7 @@ require_once("close.php")
     </div>
 
 
-    <script src="JS/modal.js"></script>
+    <script src="../JS/modal.js"></script>
 </body>
 
 </html>
