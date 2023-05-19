@@ -116,7 +116,7 @@ require_once("close.php")
         <div class="overlay modal-trigger"></div>
         <div class="modal">
             <button class="close-modal modal-trigger">X</button>
-            <h1>Add</h1>
+            <h1 class="modal-title">Add</h1>
             <form method="POST">
                 <div class="add-ampoule-ctn">
                     <div class="input-container">
