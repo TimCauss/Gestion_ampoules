@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #0F0F0F;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
     font-size: 40px;
     line-height: 24px;
     text-align: center;
-    color: #A378FF;
+    color: #FFFFFF;
 }
 
 header {
@@ -38,7 +39,7 @@ button,
 button:hover,
 .btn-add:hover {
     cursor: pointer;
-    background-color: #A378FF;
+    background-color: #380144;
     color: white;
     scale: 1.1;
 }
@@ -52,15 +53,16 @@ main {
 
 table {
     border-collapse: collapse;
+    color: #FFFFFF;
 }
 
 th {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     padding: 10px;
 }
 
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     padding: 1px 5px;
 }
 
@@ -86,8 +88,21 @@ svg {
 
 .edit_input {
     border: none;
+    color: #FFFFFF;
+    background-color: #0F0F0F;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]:focus {
+    -moz-appearance: button;
+}
+
+input:focus {
+    outline: #380144 solid 2px;
+}
 
 /*! Début style Modal */
 
@@ -232,7 +247,7 @@ select {
 /** Formulaire login style START */
 
 .body-login {
-    background-color: #A378FF;
+    background-color: #380144;
     padding-top: 50px;
 }
 
@@ -303,8 +318,8 @@ select {
     transition: background-color 0.2s ease-in-out;
 }
 
-.subm-ctn input[type="submit"]:hover {
-    background-color: #A378FF;
+.subm-ctn button[type="submit"]:hover {
+    background-color: #380144;
 }
 
 .forgt {
