@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION["user"]["role"] === 0) {
+if ($_SESSION["user"]["role"] === 0 || !isset($_SESSION["user"]["id"])) {
     header("Location: index.php");
 }
 //on vérifie si le formulaire a été envoyé
