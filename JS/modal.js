@@ -4,6 +4,8 @@ const modalContainer2 = document.querySelector(".modal-container2");
 const modalTrigger2 = document.querySelectorAll(".modal-trigger2");
 const deleteBtn = document.querySelector(".delete");
 
+const counterDisplayElem = document.querySelector(".counter-display");
+
 //variable pour l'édit :
 const triggerEdit = document.querySelectorAll(".modal-trigger3");
 
@@ -21,8 +23,17 @@ modalTrigger2.forEach((trigger) =>
 );
 
 deleteBtn.addEventListener("click", () => {
-  window.location.replace("del.php?id=" + id);
+  let x = document.getElementById("supprToast");
+  x.classList.toggle("show");
+  setTimeout(function() {
+    x.classList.remove("show");
+  }, 3000);
+  setTimeout(redirect(), 3000);
 });
+
+function redirect() {
+  window.location.replace("del.php?id=" + id);
+}
 
 triggerEdit.forEach((trigger) =>
   trigger.addEventListener("click", () => {

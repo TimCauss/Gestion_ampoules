@@ -15,7 +15,7 @@ h1 {
     font-size: 40px;
     line-height: 24px;
     text-align: center;
-    color: #7D7F8B;
+    color: #2355FE;
 }
 
 header {
@@ -23,7 +23,6 @@ header {
 }
 
 .hd-ctn {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +30,6 @@ header {
     padding: 5px 10px;
     gap: 10px;
     height: 44px;
-    /* Inside auto layout */
 }
 
 .hd-ctn h1 {
@@ -40,11 +38,10 @@ header {
     font-weight: 600;
     font-size: 2rem;
     line-height: 24px;
-    color: #7D7F8B;
+    color: #2355FE;
 }
 
 .login-ctn {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -53,7 +50,6 @@ header {
     width: 72px;
     height: 34px;
     background: #FFFFFF;
-    /* shdw */
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
 }
@@ -73,7 +69,6 @@ header {
 nav {
     margin: 25px 10px;
     background: #FFFFFF;
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -94,14 +89,9 @@ nav button {
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     text-align: center;
     color: #7D7F8B;
     background: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 10px;
     gap: 10px;
     border: none;
@@ -114,8 +104,12 @@ nav button:hover {
     border-color: #2355FE;
 }
 
-.btn-add {
+.btn-add,
+.delete,
+.cancel,
+.login-btn {
     font-family: 'Open Sans';
+    cursor: pointer;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -167,6 +161,23 @@ td {
     max-width: 30px;
 }
 
+.td-ligne {
+    max-width: 60px;
+    text-align: center;
+}
+
+
+.dollar {
+    margin: 0;
+    color: #838AA7;
+}
+
+.dollar,
+.pricetag {
+    text-align: center;
+    width: 50%;
+}
+
 tr:hover .td-hover {
     background-color: rgba(116, 116, 116, 0.322);
 }
@@ -186,9 +197,6 @@ svg {
     background-color: #0f0f0f00;
 }
 
-input span.date-toggle {
-    display: none;
-}
 
 input[type=number] {
     -moz-appearance: textfield;
@@ -357,7 +365,7 @@ input {
 /** Formulaire login style START */
 
 .body-login {
-    background-color: #380144;
+    background-color: #F7F7FA;
     padding-top: 50px;
 }
 
@@ -374,8 +382,7 @@ input {
 .form-header {
     display: flex;
     width: 100%;
-    justify-content: end;
-    align-items: flex-start;
+    justify-content: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px;
     margin-bottom: 30px;
@@ -385,9 +392,11 @@ input {
     text-decoration: none;
 }
 
-.form-header a h1 {
+.form-header h1 {
+    text-align: center;
     margin: 10px;
-    color: #CECECE;
+    padding: 10px 0;
+    color: #2355FE;
 }
 
 .form-main {
@@ -413,25 +422,6 @@ input {
     justify-content: center;
 }
 
-.subm-ctn input[type="submit"] {
-    background-color: #575757;
-    width: 95px;
-    height: 28px;
-    font-family: 'Bebas Neue';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-.subm-ctn button[type="submit"]:hover {
-    background-color: #380144;
-}
-
 .forgt {
     margin: 10px auto;
 }
@@ -448,4 +438,45 @@ input {
 
 .action-ctn {
     margin-top: 100px;
+}
+
+/** Toast */
+
+.toast {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    left: 32%;
+    width: 33%;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateY(-150px);
+    transition: 0.4s ease-in-out;
+}
+
+.show {
+    transform: translateY(0px);
+}
+
+
+.toast-header {
+    display: flex;
+    flex-direction: row;
+    color: #2355FE;
+    justify-content: space-between;
+}
+
+.toast_body {
+    justify-self: center;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #7D7F8B;
 }

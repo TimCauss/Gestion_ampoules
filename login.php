@@ -14,20 +14,36 @@ if (!empty($_POST)) {
 
         //on se connecte à la BDD
         require_once "connect.php";
-        $sql = "SELECT user_name, pass FROM users WHERE user_name = :user_name";
+        $sql = "SELECT id, user_name, pass, is_admin, email FROM users WHERE user_name = :user_name";
         $query = $db->prepare($sql);
         $query->bindValue(":user_name", $user_name, PDO::PARAM_STR);
         $query->execute();
 
         $user = $query->fetch();
 
-        if(!$user){
-            die("User does not exist");
+        //on test pour savoir si un user existe
+        if (!$user) {
+            die("User and/or password does not exist");
         }
-        if(!password_verify($_POST["pass"], $user["pass"])){
-            die();
+        //on test si le mdp est bon
+        if (!password_verify($_POST["pass"], $user["pass"])) {
+            die("User and/or password does not exist");
         }
 
+        //ici l'user et le mot de passe sont corrects
+        //On ouvre la session (on connecte l'utilisateur)
+
+        
+        //on démarre la session PHP:
+        session_start();
+        //on stocke dans $_SESSION les informations de l'utilisateur
+        $_SESSION["user"] = [
+            "id" => $user["id"],
+            "name" => $user["user_name"],
+            "email" => $user["email"],
+            "role" => $user["is_admin"]
+        ];
+        //on redirige vers le dashboard
     }
 }
 
@@ -49,9 +65,7 @@ if (!empty($_POST)) {
     <main>
         <div class="form-container">
             <div class="form-header">
-                <a href="">
-                    <h1>need help ?</h1>
-                </a>
+                <h1>Login Page</h1>
             </div>
             <form method="POST">
                 <div class="form-main">
@@ -63,7 +77,7 @@ if (!empty($_POST)) {
                     </div>
                     <div class="action-ctn">
                         <div class="subm-ctn">
-                            <button type="submit">login</button>
+                            <button class="login-btn" type="submit">login</button>
                         </div>
                         <div class="subm-ctn forgt">
                             <a href="#">Forgot Password ?</a>
