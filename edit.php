@@ -1,4 +1,8 @@
 <?php
+
+if (!$_SESSION || $_SESSION["user"]["role"] === 0) {
+    header("Location: index.php");
+}
 require_once("connect.php");
 
 $id = strip_tags($_GET["id"]);

@@ -1,4 +1,8 @@
 <?php
+if (!$_SESSION || $_SESSION["user"]["role"] === 0) {
+    header("Location: index.php");
+}
+
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
     require_once("connect.php");
 

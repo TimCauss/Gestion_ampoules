@@ -33,7 +33,7 @@ if (!empty($_POST)) {
         //ici l'user et le mot de passe sont corrects
         //On ouvre la session (on connecte l'utilisateur)
 
-        
+
         //on démarre la session PHP:
         session_start();
         //on stocke dans $_SESSION les informations de l'utilisateur
@@ -44,6 +44,7 @@ if (!empty($_POST)) {
             "role" => $user["is_admin"]
         ];
         //on redirige vers le dashboard
+        header("Location: index.php");
     }
 }
 

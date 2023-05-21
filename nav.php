@@ -1,4 +1,9 @@
 <nav>
     <button class="modal-trigger" href="add.php">Add Entry</button>
-    <a href="inscription.php"><button class="cr-usr">Create User</button></a>
+
+    <?php
+    if ($_SESSION["user"]["role"] === 1) {
+        include_once "button_create_user.php";
+    }
+    ?>
 </nav>

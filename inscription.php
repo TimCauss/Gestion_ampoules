@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if ($_SESSION["user"]["role"] === 0) {
+    header("Location: index.php");
+}
 //on vérifie si le formulaire a été envoyé
 if (!empty($_POST)) {
     //formulaire envoé

@@ -1,0 +1,1 @@
+<a href="inscription.php"><button class="cr-usr">Create User</button></a>
