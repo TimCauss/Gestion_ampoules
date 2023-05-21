@@ -35,12 +35,12 @@
                             </td>
                             <td class="td-hover">
 
-                                <svg class="modal-trigger2 trash" data-id="<?= $row["id"] ?>" width="13" height="13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="modal-trigger2 trash" id="trash" data-id="<?= $row["id"] ?>" width="13" height="13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.25 17.25 6.75 6.75"></path>
                                     <path d="m17.25 6.75-10.5 10.5"></path>
                                 </svg>
 
-                                <svg data-id="<?= $row["id"] ?>" class="modal-trigger3" width="14" height="14" stroke-width="0.541667" stroke="currentColor" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg data-id="<?= $row["id"] ?>" id="check" class="modal-trigger3" width="14" height="14" stroke-width="0.541667" stroke="currentColor" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10.6691 3.75L4.9816 10.25L2.5441 7.8125" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </td>
