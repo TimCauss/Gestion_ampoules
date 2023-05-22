@@ -52,6 +52,7 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .login-ctn p {

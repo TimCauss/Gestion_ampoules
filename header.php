@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="CSS/header.css">
+
 <header>
     <div class="hd-ctn">
         <h1>Bulbs Manager</h1>

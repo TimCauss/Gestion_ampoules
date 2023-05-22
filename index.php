@@ -105,7 +105,7 @@ require_once("close.php")
                 <p>Are you sure you want to delete this entry?</p>
             </div>
             <div class="modal-btn-ctn">
-                <div class="btn-suppr"><button class="delete" id="suppr" onclick="Toasty(this.id)">Delete</button>
+                <div class="btn-suppr"><button class="delete" id="suppr">Delete</button>
                 </div>
                 <div class="btn-cancel modal-trigger2"><button class="cancel">Cancel</button></div>
             </div>

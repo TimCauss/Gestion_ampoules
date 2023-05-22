@@ -1,0 +1,29 @@
+.disconnect-session {
+    background: #FFFFFF;
+    padding: 0px 8px 0px 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    position: absolute;
+    right: 10px;
+    top: 48px;
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: transform 0.2s ease-in-out, opacity 0.3s;
+}
+
+.disconnect-session a {
+    text-decoration: none;
+    color: #2355FE;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.disc-show {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 0;
+}
