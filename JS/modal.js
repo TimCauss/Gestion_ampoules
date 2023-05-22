@@ -23,17 +23,8 @@ modalTrigger2.forEach((trigger) =>
 );
 
 deleteBtn.addEventListener("click", () => {
-  let x = document.getElementById("supprToast");
-  x.classList.toggle("show");
-  setTimeout(function() {
-    x.classList.remove("show");
-  }, 3000);
-  setTimeout(redirect(), 3000);
-});
-
-function redirect() {
   window.location.replace("del.php?id=" + id);
-}
+});
 
 triggerEdit.forEach((trigger) =>
   trigger.addEventListener("click", () => {

@@ -108,7 +108,8 @@ nav button:hover {
 .btn-add,
 .delete,
 .cancel,
-.login-btn {
+.login-btn,
+.register-btn {
     font-family: 'Open Sans';
     cursor: pointer;
     font-style: normal;
@@ -465,12 +466,12 @@ input {
     padding: 15px;
     display: flex;
     flex-flow: column nowrap;
-    transform: translateY(-150px);
+    transform: translateY(-110%);
     transition: 0.4s ease-in-out;
 }
 
 .show {
-    transform: translateY(0px);
+    transform: translateY(0%);
 }
 
 .toast-header {
@@ -489,4 +490,12 @@ input {
     font-size: 20px;
     line-height: 24px;
     color: #7D7F8B;
+}
+
+/** Inscription page **/
+.regctn {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    padding-bottom: 25px;
 }

@@ -1,6 +1,6 @@
 <?php
-
-if (!$_SESSION || $_SESSION["user"]["role"] === 0) {
+session_start();
+if (!isset($_SESSION["user"]) || $_SESSION["user"]["role"] === 0) {
     header("Location: index.php");
 }
 require_once("connect.php");
@@ -27,4 +27,7 @@ $query->bindValue(":position", $position);
 $query->bindValue(":price", $price);
 $query->execute();
 require_once("close.php");
+$_SESSION["action"] = [
+    "last_edit_id" => $id
+];
 echo "<script>window.close();</script>";

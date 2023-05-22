@@ -37,6 +37,7 @@ if (!empty($_POST)) {
         echo '<script language="Javascript">
             alert ("User created" )
             </script>';
+        header("Location: index.php");
     } else {
         die("Formulaire incomplet");
     }
@@ -45,27 +46,42 @@ if (!empty($_POST)) {
 
 ?>
 
-<h1>Inscription</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="POST">
-    <div>
-        <label for="user_name">Username</label>
-        <input type="text" name="user_name" id="user_name">
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-    </div>
-    <div>
-        <label for="pass">Password</label>
-        <input type="password" name="pass" id="pass">
-    </div>
-    <button type="submit">Create user</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+</head>
 
+<body>
 
-<?php
+    <main>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Register</h1>
+            </div>
+            <form method="POST">
+                <div class="form-main register-page">
+                    <div>
+                        <input type="text" name="user_name" id="user_name" placeholder="Username">
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="password" name="pass" id="pass" placeholder="Password">
+                    </div>
+                </div>
+                <div class="regctn">
+                    <button class="register-btn" type="submit">Create user</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
 
-
-
-?>
+</html>
