@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["user"]["id"])) {
+    header("Location: login.php");
+}
+
 require_once("connect.php");
 
 $sql = "SELECT * FROM ampoules";
