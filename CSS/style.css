@@ -499,3 +499,35 @@ input {
     justify-content: center;
     padding-bottom: 25px;
 }
+
+@media (max-width: 400px) {
+    .edit_input[value] {
+        font-size: 12px;
+    }
+
+    .td-hover {
+        padding: 0;
+        margin: 0;
+    }
+
+    #trash {
+        padding: 0;
+    }
+
+    #check {
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 700px) {
+    .edit_input[value] {
+        font-size: 15px;
+    }
+
+    tr select {
+        font-size: 15px;
+    }
+
+}
