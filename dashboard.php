@@ -1,4 +1,33 @@
+<?php
+$total_entry = 0;
+$total_price = 0;
+foreach ($result as $entry) {
+    ++$total_entry;
+    $total_price += $entry["price"];
+}
+?>
 <main>
+
+    <section class="datas">
+        <div class=" total-entry">
+            <div class="total-container">
+                <div class="total-title">
+                    <h2>Total</h2>
+                </div>
+                <h2 class="total-value">
+                    <?php echo "$total_entry"; ?>
+                </h2>
+            </div>
+            <div class="total-container">
+                <div class="total-title">
+                    <h2>Cost</h2>
+                </div>
+                <h2 class="total-value">
+                    $<?php echo "$total_price"; ?>
+                </h2>
+            </div>
+        </div>
+    </section>
     <table>
 
         <thead>

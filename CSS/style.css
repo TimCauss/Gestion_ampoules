@@ -500,6 +500,39 @@ input {
     padding-bottom: 25px;
 }
 
+/** data **/
+.total-entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20vw;
+}
+
+.total-entry h2 {
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.total-value {
+    color: #7D7F8B;
+    font-size: 22px;
+}
+
+.total-title {
+    font-size: 15px;
+    color: #2355FE;
+}
+
+.total-container {
+    margin-top: 10px;
+    margin: 0;
+    background: #FFFFFF;
+    padding: 0px 11px 0px 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+
 @media (max-width: 400px) {
     .edit_input[value] {
         font-size: 12px;
@@ -521,6 +554,7 @@ input {
 
 }
 
+
 @media (min-width: 700px) {
     .edit_input[value] {
         font-size: 15px;
@@ -528,6 +562,13 @@ input {
 
     tr select {
         font-size: 15px;
+    }
+
+}
+
+@media (min-width: 1320px) {
+    .total-entry {
+        gap: 269px;
     }
 
 }
