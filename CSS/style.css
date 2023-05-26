@@ -127,6 +127,11 @@ nav button:hover {
     transition: background-color 0.5s ease-in-out scale 0.8s ease-in-out;
 }
 
+.delete {
+    background-color: #d84747;
+    color: #b4b4b4;
+}
+
 .btn-add:hover {
     cursor: pointer;
     border-color: #2355FE;
